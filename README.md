@@ -1,4 +1,4 @@
-# Lem-IPC
+# Signal
 
 [![Build Status](https://travis-ci.org/adjivas/signal.svg)](https://travis-ci.org/adjivas/signal)
 [![GPLv3 License](http://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/copyleft/gpl.html)
