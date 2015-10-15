@@ -1,6 +1,6 @@
 // @adjivas - github.com/adjivas. See the LICENSE
 // file at the top-level directory of this distribution and at
-// https://github.com/adjivas/signal
+// https://github.com/adjivas/sig
 //
 // This file may not be copied, modified, or distributed
 // except according to those terms.
@@ -51,7 +51,9 @@ pub enum Sig {
     RTMAX  = 64,
 }
 
-extern "C" {
+#[allow(improper_ctypes)]
+extern "C" {    
     pub fn signal(sig: c_int, handler: sighandler_t) -> sighandler_t;
     pub fn kill(pid: pid_t, sig: c_int) -> c_int;
+    pub fn getpid() -> pid_t;
 }

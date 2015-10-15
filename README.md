@@ -1,24 +1,23 @@
 # Signal
 
-[![Build Status](https://travis-ci.org/adjivas/signal.svg)](https://travis-ci.org/adjivas/signal)
+[![Build Status](https://travis-ci.org/adjivas/sig.svg)](https://travis-ci.org/adjivas/sig)
 [![GPLv3 License](http://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/copyleft/gpl.html)
 
 #### How to build:
 ```shell
-git clone https://github.com/adjivas/signal.git signal && cd signal
+git clone https://github.com/adjivas/sig.git signal && cd signal
 cargo build
 ```
 
 #### How to use:
-```shell
-cargo run --example usr1
-```
+* cargo run --example getpid
+* cargo run --example usr1
 
 #### Cargo'git-Dependencies:
 ```shell
  Libc
   |
-Signal
+ Sig
 ```
 
 #### Directory-Tree:
@@ -35,4 +34,4 @@ Signal
 ```
 
 #### License:
-*signal*'s code in this repo uses the [GNU GPL v3](http://www.gnu.org/licenses/gpl-3.0.html) [license](https://github.com/adjivas/signal/blob/master/LICENSE).
+*sig*'s code in this repo uses the [GNU GPL v3](http://www.gnu.org/licenses/gpl-3.0.html) [license](https://github.com/adjivas/sig/blob/master/LICENSE).

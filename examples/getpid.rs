@@ -6,5 +6,10 @@
 // except according to those terms.
 
 #[macro_use]
-mod macros;
-pub mod ffi;
+extern crate sig;
+
+fn main() {
+    let from: i32 = getpid!();
+
+    println!("{}", from);
+}
