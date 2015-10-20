@@ -22,7 +22,10 @@ macro_rules! getpid {
 macro_rules! signal {
     ($sig: expr, $fnc: expr) => ({
         unsafe {
-            sig::ffi::signal($sig as i32, $fnc)
+            sig::ffi::signal (
+                $sig as i32,
+                $fnc
+            )
         }
     });
 }
@@ -35,8 +38,8 @@ macro_rules! kill {
     ($pid: expr, $sig: expr) => ({
         match unsafe {
             sig::ffi::kill (
-                $pid as sig::ffi::pid_t,
-                $sig as sig::ffi::c_int,
+                $pid as i32,
+                $sig as i32,
             )
         } {
             -1i32 => false,

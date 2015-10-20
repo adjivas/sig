@@ -5,6 +5,3 @@ authors = ["adjivas <adjivas@users.noreply.github.com>"]
 description = "ffi library of signal(2) and kill(2)"
 license = "gpl-3.0"
 repository = "https://github.com/adjivas/sig"
-
-[dependencies.libc]
-version = "*"

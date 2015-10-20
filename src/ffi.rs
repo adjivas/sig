@@ -5,14 +5,6 @@
 // This file may not be copied, modified, or distributed
 // except according to those terms.
 
-#![allow(non_camel_case_types)]
-#![allow(dead_code)]
-extern crate libc;
-
-pub type sighandler_t = fn(c_int);
-pub type c_int = libc::types::os::arch::c95::c_int;
-pub type pid_t = libc::types::os::arch::posix88::pid_t;
-
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub enum Sig {
@@ -52,8 +44,8 @@ pub enum Sig {
 }
 
 #[allow(improper_ctypes)]
-extern "C" {    
-    pub fn signal(sig: c_int, handler: sighandler_t) -> sighandler_t;
-    pub fn kill(pid: pid_t, sig: c_int) -> c_int;
-    pub fn getpid() -> pid_t;
+extern "C" {
+    pub fn signal(sig: i32, handler: fn(i32)) -> fn(i32);
+    pub fn kill(pid: i32, sig: i32) -> i32;
+    pub fn getpid() -> i32;
 }

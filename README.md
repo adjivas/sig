@@ -13,20 +13,15 @@ cargo build
 * cargo run --example getpid
 * cargo run --example usr1
 
-#### Cargo'git-Dependencies:
-```shell
- Libc
-  |
- Sig
-```
-
 #### Directory-Tree:
 ```shell
 .
 |__ Cargo.toml
 |__ LICENSE
 |__ README.md
-|__ example/usr1.rs
+|__ examples
+|   |__ usr1.rs
+|   \__ getpid.rs
 \__ src
     |__ ffi.rs
     |__ lib.rs
