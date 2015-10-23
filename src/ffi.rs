@@ -8,8 +8,8 @@
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub enum Sig {
-    HUP    =  0, // Hangup (POSIX).
-    INT    =  1, // Interrupt (ANSI).
+    HUP    =  1, // Hangup (POSIX).
+    INT    =  2, // Interrupt (ANSI).
     QUIT   =  3, // Quit (POSIX).
     ILL    =  4, // Illegal instruction (ANSI).
     TRAP   =  5, // Trace trap (POSIX).
