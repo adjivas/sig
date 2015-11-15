@@ -1,7 +1,8 @@
 # Signal
 
-[![Build Status](https://travis-ci.org/adjivas/sig.svg)](https://travis-ci.org/adjivas/sig)
 [![GPLv3 License](http://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/copyleft/gpl.html)
+[![Build Status](https://travis-ci.org/adjivas/sig.svg)](https://travis-ci.org/adjivas/sig)
+[![Circle CI](https://circleci.com/gh/adjivas/sig/tree/master.svg?style=svg)](https://circleci.com/gh/adjivas/sig/tree/master)
 
 #### How to build:
 ```shell
