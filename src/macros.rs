@@ -16,8 +16,8 @@ macro_rules! getpid {
   });
 }
 
-/// The `getpid` macro returns the PID of
-/// program.
+/// The `signal` macro receives a signal to
+/// a PID program.
 
 #[macro_export]
 macro_rules! signal {
@@ -31,6 +31,9 @@ macro_rules! signal {
         }
     });
 }
+
+/// The `signal` macro sends a signal to
+/// a PID program.
 
 #[macro_export]
 macro_rules! kill {
