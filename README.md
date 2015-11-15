@@ -1,8 +1,6 @@
 # Signal
 
-[![GPLv3 License](http://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/copyleft/gpl.html)
-[![Build Status](https://travis-ci.org/adjivas/sig.svg)](https://travis-ci.org/adjivas/sig)
-[![Circle CI](https://circleci.com/gh/adjivas/sig/tree/master.svg?style=svg)](https://circleci.com/gh/adjivas/sig/tree/master)
+[![docs-badge][]][docs] [![license-badge][]][license] [![travis-badge][]][travis] [![circle-badge][]][circle]
 
 #### How to build:
 ```shell
@@ -30,4 +28,13 @@ cargo build
 ```
 
 #### License:
-*sig*'s code in this repo uses the [GNU GPL v3](http://www.gnu.org/licenses/gpl-3.0.html) [license](https://github.com/adjivas/sig/blob/master/LICENSE).
+*sig*'s code in this repo uses the [GNU GPL v3](http://www.gnu.org/licenses/gpl-3.0.html) [license][license].
+
+[docs-badge]: https://img.shields.io/badge/API-docs-blue.svg?style=flat-square
+[docs]: http://adjivas.github.io/sig/sig
+[license-badge]: http://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square
+[license]: https://github.com/adjivas/sig/blob/master/LICENSE
+[travis-badge]: https://travis-ci.org/adjivas/sig.svg?style=flat-square
+[travis]: https://travis-ci.org/adjivas/sig
+[circle-badge]: https://circleci.com/gh/adjivas/sig/tree/master.svg?style=svg
+[circle]: https://circleci.com/gh/adjivas/sig/tree/master
