@@ -1,0 +1,1 @@
+initSidebarItems({"macro":[["getpid!","The `getpid` macro returns the PID of program."],["kill!","The `signal` macro sends a signal to a PID program."],["signal!","The `signal` macro receives a signal to a PID program."]],"mod":[["ffi",""]]});
