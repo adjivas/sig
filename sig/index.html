@@ -9,7 +9,9 @@
 
     <title>sig - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../main.css">
+    
 
     
     
@@ -42,51 +44,47 @@
 
     <section id='main' class="content mod">
 <h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>sig</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-0' class='srclink' href='../src/sig/lib.rs.html#8-10' title='goto source code'>[src]</a></span></h1>
-<h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/sig/src/lib.rs.html#8-23' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'>
+<h1 id='sig' class='section-header'><a href='#sig'>Sig</a></h1>
+<p><a href="https://crates.io/crates/sig"><img src="https://img.shields.io/badge/crates.io-v0.1.0-orange.svg?style=flat-square" alt="Crate"></a> <a href="https://github.com/adjivas/sig/blob/master/README.md#license"><img src="https://img.shields.io/crates/l/cublas.svg?style=flat-square" alt="license-badge"></a> <a href="https://travis-ci.org/adjivas/sig"><img src="https://travis-ci.org/adjivas/sig.svg?style=flat-square" alt="travis-badge"></a> <a href="https://circleci.com/gh/adjivas/sig/tree/master"><img src="https://circleci.com/gh/adjivas/sig/tree/master.svg?style=svg" alt="circle-badge"></a></p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='ffi/index.html'
-                               title='sig::ffi'>ffi</a></td>
-                        <td class='docblock short'>
-                             
-                        </td>
-                    </tr>
-                </table><h2 id='macros' class='section-header'><a href="#macros">Macros</a></h2>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='ffi/index.html'
+                                  title='sig::ffi'>ffi</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table><h2 id='macros' class='section-header'><a href="#macros">Macros</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='macro' href='macro.getpid!.html'
-                               title='sig::getpid!'>getpid!</a></td>
-                        <td class='docblock short'>
-                             <p>The <code>getpid</code> macro returns the PID of
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.getpid!.html'
+                                  title='sig::getpid!'>getpid!</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>getpid</code> macro returns the PID of
 program.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='macro' href='macro.kill!.html'
-                               title='sig::kill!'>kill!</a></td>
-                        <td class='docblock short'>
-                             <p>The <code>signal</code> macro sends a signal to
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.kill!.html'
+                                  title='sig::kill!'>kill!</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>signal</code> macro sends a signal to
 a PID program.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='macro' href='macro.signal!.html'
-                               title='sig::signal!'>signal!</a></td>
-                        <td class='docblock short'>
-                             <p>The <code>signal</code> macro receives a signal to
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.signal!.html'
+                                  title='sig::signal!'>signal!</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>signal</code> macro receives a signal to
 a PID program.</p>
-
-                        </td>
-                    </tr>
-                </table></section>
+                           </td>
+                       </tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -109,6 +107,8 @@ a PID program.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -129,7 +129,7 @@ a PID program.</p>
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
@@ -145,6 +145,6 @@ a PID program.</p>
     <script src="../jquery.js"></script>
     <script src="../main.js"></script>
     
-    <script async src="../search-index.js"></script>
+    <script defer src="../search-index.js"></script>
 </body>
 </html>

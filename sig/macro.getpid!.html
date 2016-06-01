@@ -9,7 +9,9 @@
 
     <title>sig::getpid! - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../main.css">
+    
 
     
     
@@ -42,16 +44,13 @@
 
     <section id='main' class="content macro">
 <h1 class='fqn'><span class='in-band'><a href='index.html'>sig</a>::<wbr><a class='macro' href=''>getpid!</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-56' class='srclink' href='../src/sig/macros.rs.html#12-17' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-89' class='srclink' href='../src/sig/src/macros.rs.html#12-17' title='goto source code'>[src]</a></span></h1>
 <pre class='rust macro'>
 <span class='macro'>macro_rules</span><span class='macro'>!</span> <span class='ident'>getpid</span> {
-  () <span class='op'>=&gt;</span> ({
-    <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>sig</span>;
-    <span class='kw'>unsafe</span> { <span class='ident'>sig</span>::<span class='ident'>ffi</span>::<span class='ident'>getpid</span>() }
-  });
+    () <span class='op'>=&gt;</span> { ... };
 }</pre>
 <div class='docblock'><p>The <code>getpid</code> macro returns the PID of
 program.</p>
@@ -78,6 +77,8 @@ program.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -98,7 +99,7 @@ program.</p>
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
@@ -114,6 +115,6 @@ program.</p>
     <script src="../jquery.js"></script>
     <script src="../main.js"></script>
     
-    <script async src="../search-index.js"></script>
+    <script defer src="../search-index.js"></script>
 </body>
 </html>

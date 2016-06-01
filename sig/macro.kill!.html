@@ -9,7 +9,9 @@
 
     <title>sig::kill! - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../main.css">
+    
 
     
     
@@ -42,28 +44,14 @@
 
     <section id='main' class="content macro">
 <h1 class='fqn'><span class='in-band'><a href='index.html'>sig</a>::<wbr><a class='macro' href=''>kill!</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-58' class='srclink' href='../src/sig/macros.rs.html#39-56' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-91' class='srclink' href='../src/sig/src/macros.rs.html#39-56' title='goto source code'>[src]</a></span></h1>
 <pre class='rust macro'>
 <span class='macro'>macro_rules</span><span class='macro'>!</span> <span class='ident'>kill</span> {
-    (<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>pid</span>: <span class='ident'>expr</span>) <span class='op'>=&gt;</span> ({
-        <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>sig</span>;
-        <span class='macro'>kill</span><span class='macro'>!</span>(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>pid</span>, <span class='ident'>sig</span>::<span class='ident'>ffi</span>::<span class='ident'>Sig</span>::<span class='ident'>KILL</span>)
-    });
-    (<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>pid</span>: <span class='ident'>expr</span>, <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>sig</span>: <span class='ident'>expr</span>) <span class='op'>=&gt;</span> ({
-        <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>sig</span>;
-        <span class='kw'>match</span> <span class='kw'>unsafe</span> {
-            <span class='ident'>sig</span>::<span class='ident'>ffi</span>::<span class='ident'>kill</span> (
-                <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>pid</span> <span class='kw'>as</span> <span class='ident'>i32</span>,
-                <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>sig</span> <span class='kw'>as</span> <span class='ident'>i32</span>,
-            )
-        } {
-            <span class='op'>-</span><span class='number'>1i32</span> <span class='op'>=&gt;</span> <span class='boolval'>false</span>,
-            _ <span class='op'>=&gt;</span> <span class='boolval'>true</span>,
-        }
-    });
+    (<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>pid</span>: <span class='ident'>expr</span>) <span class='op'>=&gt;</span> { ... };
+    (<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>pid</span>: <span class='ident'>expr</span>, <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>sig</span>: <span class='ident'>expr</span>) <span class='op'>=&gt;</span> { ... };
 }</pre>
 <div class='docblock'><p>The <code>signal</code> macro sends a signal to
 a PID program.</p>
@@ -90,6 +78,8 @@ a PID program.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -110,7 +100,7 @@ a PID program.</p>
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
@@ -126,6 +116,6 @@ a PID program.</p>
     <script src="../jquery.js"></script>
     <script src="../main.js"></script>
     
-    <script async src="../search-index.js"></script>
+    <script defer src="../search-index.js"></script>
 </body>
 </html>
