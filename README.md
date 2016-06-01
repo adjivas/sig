@@ -28,14 +28,27 @@ cargo build
 ```
 
 #### License:
-*sig*'s code in this repo uses the [GNU GPL v3](http://www.gnu.org/licenses/gpl-3.0.html) [license][license].
+**Sig**'s code in this repo is licensed under either of:
+
+uses the [APACHE][license-mit] and [MIT][license-apache] license.
+ * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0).
+  * MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT).
+
+  [license-apache]: https://github.com/adjivas/sig/blob/master/LICENSE-APACHE
+  [license-mit]: https://github.com/adjivas/sig/blob/master/LICENSE-MIT
+
+  at your option.
+
+#### Contribution:
+
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.
 
 [crate-badge]: https://img.shields.io/badge/crates.io-v0.1.0-orange.svg?style=flat-square
 [crate]: https://crates.io/crates/sig
 [docs-badge]: https://img.shields.io/badge/API-docs-blue.svg?style=flat-square
 [docs]: http://adjivas.github.io/sig/sig
-[license-badge]: http://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square
-[license]: https://github.com/adjivas/sig/blob/master/LICENSE
+[license-badge]: https://img.shields.io/crates/l/cublas.svg?style=flat-square
+[license]: https://github.com/adjivas/sig/blob/master/README.md#license
 [travis-badge]: https://travis-ci.org/adjivas/sig.svg?style=flat-square
 [travis]: https://travis-ci.org/adjivas/sig
 [circle-badge]: https://circleci.com/gh/adjivas/sig/tree/master.svg?style=svg
