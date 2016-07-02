@@ -5,7 +5,7 @@
 // This file may not be copied, modified, or distributed
 // except according to those terms.
 
-pub use libc::{pid_t, c_int, getpid, signal, kill};
+pub use libc::{sighandler_t, pid_t, c_int, getpid, sigaction, signal, kill};
 
 #[allow(non_snake_case)]
 pub mod Sig {

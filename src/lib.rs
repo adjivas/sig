@@ -23,3 +23,9 @@ extern crate libc;
 #[macro_use]
 mod macros;
 pub mod ffi;
+
+#[inline]
+pub unsafe fn set_signal_handler(signal: ffi::c_int,
+                          handler: unsafe extern "C" fn(ffi::c_int)) {
+    ffi::signal(signal, handler as ffi::sighandler_t);
+}

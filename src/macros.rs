@@ -22,9 +22,9 @@ macro_rules! getpid {
 macro_rules! signal {
     ($sig: expr, $fnc: expr) => ({
         unsafe {
-            $crate::ffi::signal (
+            $crate::set_signal_handler (
                 $sig as $crate::ffi::c_int,
-                $fnc as unsafe extern "C" fn ($crate::ffi::c_int) as usize
+                $fnc
             )
         }
     });
