@@ -8,7 +8,7 @@
 #[macro_use]
 extern crate sig;
 
-fn event(sig: i32) {
+unsafe extern "C" fn event(sig: i32) {
     println!("{} was intercepted", sig);
 }
 

@@ -5,48 +5,40 @@
 // This file may not be copied, modified, or distributed
 // except according to those terms.
 
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub enum Sig {
-    HUP    =  1, // Hangup (POSIX).
-    INT    =  2, // Interrupt (ANSI).
-    QUIT   =  3, // Quit (POSIX).
-    ILL    =  4, // Illegal instruction (ANSI).
-    TRAP   =  5, // Trace trap (POSIX).
-    IOT    =  6, // Abort (POSIX).
-    BUS    =  7, // IOT trap (4.2 BSD).
-    FPE    =  8, // BUS error (4.2 BSD).
-    KILL   =  9, // Kill, unblockable (POSIX).
-    USR1   = 10, // User-defined signal 1 (POSIX).
-    SEGV   = 11, // Segmentation violation (ANSI).
-    USR2   = 12, // User-defined signal 2 (POSIX).
-    PIPE   = 13, // Broken pipe (POSIX).
-    ALRM   = 14, // Alarm clock (POSIX).
-    TERM   = 15, // Termination (ANSI).
-    STKFLT = 16, // Stack fault.
-    CHLD   = 17, // Child status has changed (POSIX).
-    CONT   = 18, // Continue (POSIX).
-    STOP   = 19, // Stop, unblockable (POSIX).
-    TSTP   = 20, // Keyboard stop (POSIX).
-    TTIN   = 21, // Background read from tty (POSIX).
-    TTOU   = 22, // Background write to tttty (POSIX).
-    URG    = 23, // Urgent condition on socket (4.2 BSD).
-    XCPU   = 24, // CPU limit exceeded (4.2 BSD).
-    XFS2   = 25, // File size limit exceeded (4.2 BSD).
-    VTALRM = 26, // Virtual alarm clock (4.2 BSD).
-    PROF   = 27, // Profiling alarm clock (4.2 BSD).
-    WINCH  = 28, // Window size change (4.3 BSD, Sun).
-    POLL   = 29, // Pollable event occured (System V).
-    PWR    = 30, // Power failure restart (System V).
-    SYS    = 31, // Bad system call.
-    RTMIN  = 32,
-    RTMAX  = 64,
-}
+pub use libc::{pid_t, c_int, getpid, signal, kill};
 
-pub type SignalHandler = unsafe extern "C" fn (::std::os::raw::c_int);
+#[allow(non_snake_case)]
+pub mod Sig {
+    use libc::{self, c_int};
 
-extern "C" {
-    pub fn signal(sig: i32, handler: SignalHandler) -> SignalHandler;
-    pub fn kill(pid: i32, sig: i32) -> i32;
-    pub fn getpid() -> i32;
+    pub const HUP    : c_int = libc::SIGHUP;    // Hangup (POSIX).
+    pub const INT    : c_int = libc::SIGINT;    // Interrupt (ANSI).
+    pub const QUIT   : c_int = libc::SIGQUIT;   // Quit (POSIX).
+    pub const ILL    : c_int = libc::SIGILL;    // Illegal instruction (ANSI).
+    pub const TRAP   : c_int = libc::SIGTRAP;   // Trace trap (POSIX).
+    pub const ABRT   : c_int = libc::SIGABRT;   // Abort (POSIX).
+    pub const IOT    : c_int = libc::SIGIOT;    // IOT trap (4.2 BSD).
+    pub const BUS    : c_int = libc::SIGBUS;    // BUS error (4.2 BSD).
+    pub const FPE    : c_int = libc::SIGFPE;
+    pub const KILL   : c_int = libc::SIGKILL;   // Kill unblockable (POSIX).
+    pub const USR1   : c_int = libc::SIGUSR1;   // User-defined signal 1 (POSIX).
+    pub const SEGV   : c_int = libc::SIGSEGV;   // Segmentation violation (ANSI).
+    pub const USR2   : c_int = libc::SIGUSR2;   // User-defined signal 2 (POSIX).
+    pub const PIPE   : c_int = libc::SIGPIPE;   // Broken pipe (POSIX).
+    pub const ALRM   : c_int = libc::SIGALRM;   // Alarm clock (POSIX).
+    pub const TERM   : c_int = libc::SIGTERM;   // Termination (ANSI).
+    pub const STKFLT : c_int = libc::SIGSTKFLT; // Stack fault.
+    pub const CHLD   : c_int = libc::SIGCHLD;   // Child status has changed (POSIX).
+    pub const CONT   : c_int = libc::SIGCONT;   // Continue (POSIX).
+    pub const STOP   : c_int = libc::SIGSTOP;   // Stop unblockable (POSIX).
+    pub const TSTP   : c_int = libc::SIGTSTP;   // Keyboard stop (POSIX).
+    pub const TTIN   : c_int = libc::SIGTTIN;   // Background read from tty (POSIX).
+    pub const TTOU   : c_int = libc::SIGTTOU;   // Background write to tttty (POSIX).
+    pub const URG    : c_int = libc::SIGURG;    // Urgent condition on socket (4.2 BSD).
+    pub const XCPU   : c_int = libc::SIGXCPU;   // CPU limit exceeded (4.2 BSD).
+    pub const PROF   : c_int = libc::SIGPROF;   // Profiling alarm clock (4.2 BSD).
+    pub const WINCH  : c_int = libc::SIGWINCH;  // Window size change (4.3 BSD Sun).
+    pub const POLL   : c_int = libc::SIGPOLL;   // Pollable event occured (System V).
+    pub const PWR    : c_int = libc::SIGPWR;    // Power failure restart (System V).
+    pub const SYS    : c_int = libc::SIGSYS;    // Bad system call.
 }

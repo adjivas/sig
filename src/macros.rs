@@ -11,8 +11,7 @@
 #[macro_export]
 macro_rules! getpid {
   () => ({
-    extern crate sig;
-    unsafe { sig::ffi::getpid() }
+    unsafe { $crate::ffi::getpid() }
   });
 }
 
@@ -22,11 +21,10 @@ macro_rules! getpid {
 #[macro_export]
 macro_rules! signal {
     ($sig: expr, $fnc: expr) => ({
-        extern crate sig;
         unsafe {
-            sig::ffi::signal (
-                $sig as i32,
-                $fnc
+            $crate::ffi::signal (
+                $sig as $crate::ffi::c_int,
+                $fnc as unsafe extern "C" fn ($crate::ffi::c_int) as usize
             )
         }
     });
@@ -38,19 +36,17 @@ macro_rules! signal {
 #[macro_export]
 macro_rules! kill {
     ($pid: expr) => ({
-        extern crate sig;
         kill!($pid, sig::ffi::Sig::KILL)
     });
     ($pid: expr, $sig: expr) => ({
-        extern crate sig;
         match unsafe {
             sig::ffi::kill (
-                $pid as i32,
-                $sig as i32,
+                $pid as $crate::ffi::pid_t,
+                $sig as $crate::ffi::c_int,
             )
         } {
-            -1i32 => false,
-            _ => true,
+            -1 => true,
+            _ => false,
         }
     });
 }

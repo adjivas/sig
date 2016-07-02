@@ -18,6 +18,8 @@
 //! [circle-badge]: https://circleci.com/gh/adjivas/sig/tree/master.svg?style=svg
 //! [circle]: https://circleci.com/gh/adjivas/sig/tree/master
 
+extern crate libc;
+
 #[macro_use]
 mod macros;
 pub mod ffi;

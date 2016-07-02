@@ -8,3 +8,6 @@ documentation = "http://adjivas.github.io/sig/sig"
 repository = "https://github.com/adjivas/sig"
 readme = "README.md"
 keywords = ["kill", "signal"]
+
+[dependencies]
+libc = "0.2"
