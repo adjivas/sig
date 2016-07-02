@@ -43,9 +43,10 @@ pub enum Sig {
     RTMAX  = 64,
 }
 
-#[allow(improper_ctypes)]
+pub type SignalHandler = unsafe extern "C" fn (::std::os::raw::c_int);
+
 extern "C" {
-    pub fn signal(sig: i32, handler: fn(i32)) -> fn(i32);
+    pub fn signal(sig: i32, handler: SignalHandler) -> SignalHandler;
     pub fn kill(pid: i32, sig: i32) -> i32;
     pub fn getpid() -> i32;
 }
