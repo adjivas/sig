@@ -46,8 +46,7 @@ pub mod Sig {
 }
 
 #[allow(non_snake_case)]
-#[cfg(unix)]
-#[cfg(target_os = "osx")]
+#[cfg(target_os = "macos")]
 pub mod Sig {
     use libc::{self, c_int};
 

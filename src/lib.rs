@@ -24,29 +24,26 @@ extern crate libc;
 mod macros;
 pub mod ffi;
 
+use libc::{sigaction, sighandler_t, sigfillset};
+use std::{mem, ptr};
+
 #[inline]
 pub unsafe fn set_signal_handler(signal: ffi::c_int,
                                  handler: unsafe extern "C" fn(ffi::c_int)) {
-    use libc::{sigaction, sighandler_t, sigfillset};
-    use std::{mem, ptr};
-
     let mut sigset = mem::uninitialized();
 
     // Block all signals during the handler. This is the expected behavior, but
     // it's not guaranteed by `signal()`.
-    let rv = sigfillset(&mut sigset);
-    if rv == -1 {
-        return;
+    if sigfillset(&mut sigset) != -1 {
+        // Done because sigaction has private members.
+        // This is safe because sa_restorer and sa_handlers are pointers that
+        // might be null (that is, zero).
+        let mut action: sigaction = mem::zeroed();
+
+        // action.sa_flags = 0;
+        action.sa_mask = sigset;
+        action.sa_sigaction = handler as sighandler_t;
+
+        sigaction(signal, &action, ptr::null_mut());
     }
-
-    // Done because sigaction has private members.
-    // This is safe because sa_restorer and sa_handlers are pointers that
-    // might be null (that is, zero).
-    let mut action: sigaction = mem::zeroed();
-
-    // action.sa_flags = 0;
-    action.sa_mask = sigset;
-    action.sa_sigaction = handler as sighandler_t;
-
-    sigaction(signal, &action, ptr::null_mut());
 }
