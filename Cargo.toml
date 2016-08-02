@@ -1,7 +1,7 @@
 [package]
 name = "sig"
 version = "1.0.0"
-authors = ["adjivas <adjivas@users.noreply.github.com>"]
+authors = ["adjivas <adjivas@users.noreply.github.com>", "emilio <emilio@users.noreply.github.com>"]
 description = "ffi library of signal(2) and kill(2)"
 license = "MIT OR Apache-2.0"
 documentation = "http://adjivas.github.io/sig/sig"
