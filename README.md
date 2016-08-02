@@ -6,8 +6,8 @@ Supports POSIX. Untested on Windows (Not tested).
 
 ### TODO:
 Solve issues:
-* [Consider using sigaction() instead of signal()](sig/issues/3)
-* [Signal handlers should be unsafe functions](sig/issues/2)
+* [Consider using sigaction() instead of signal()](https://github.com/adjivas/sig/issues/3)
+* [Signal handlers should be unsafe functions](https://github.com/adjivas/sig/issues/2)
 
 #### How to build:
 ```shell
