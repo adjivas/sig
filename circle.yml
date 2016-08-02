@@ -6,5 +6,5 @@ test:
     override:
         - cargo build --verbose
         - cargo test
-        - cargo run --example gitpid
+        - cargo run --example getpid
         - cargo run --example usr1
