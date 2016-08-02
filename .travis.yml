@@ -20,9 +20,10 @@ env:
   - ARCH=i686
 
 script:
-  - cargo build
+  - cargo build --verbose
   - cargo test
-
+  - cargo run --example gitpid
+  - cargo run --example usr1
 addons:
   apt:
     packages:
