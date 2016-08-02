@@ -1,6 +1,13 @@
 # Signal
 
-[![Crate][crate-badge]][crate] [![docs-badge][]][docs] [![license-badge][]][license] [![travis-badge][]][travis] [![circle-badge][]][circle]
+[![Crate][crate-badge]][crate] [![docs-badge][]][docs] [![license-badge][]][license] [![travis-badge][]][travis]
+
+Supports POSIX. Untested on Windows (Not tested).
+
+### TODO:
+Solve issues:
+* [Consider using sigaction() instead of signal()](sig/issues/3)
+* [Signal handlers should be unsafe functions](sig/issues/2)
 
 #### How to build:
 ```shell
@@ -32,7 +39,7 @@ cargo build
 
 uses the [APACHE][license-mit] and [MIT][license-apache] license.
  * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0).
-  * MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT).
+ * MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT).
 
   [license-apache]: https://github.com/adjivas/sig/blob/master/LICENSE-APACHE
   [license-mit]: https://github.com/adjivas/sig/blob/master/LICENSE-MIT
@@ -51,5 +58,3 @@ Unless you explicitly state otherwise, any contribution intentionally submitted 
 [license]: https://github.com/adjivas/sig/blob/master/README.md#license
 [travis-badge]: https://travis-ci.org/adjivas/sig.svg?style=flat-square
 [travis]: https://travis-ci.org/adjivas/sig
-[circle-badge]: https://circleci.com/gh/adjivas/sig/tree/master.svg?style=svg
-[circle]: https://circleci.com/gh/adjivas/sig/tree/master
