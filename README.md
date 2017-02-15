@@ -1,11 +1,12 @@
 # Signal
 
-[![Crate][crate-badge]][crate] [![docs-badge][]][docs] [![license-badge][]][license] [![travis-badge][]][travis]
+[![Crate][crate-badge]][crate] [![docs-badge][]][docs] [![license-badge][]][license] [![travis-badge][]][travis] [![circle-badge][]][ci
 
 Supports POSIX. Untested on Windows (Not tested).
 
-### TODO:
+### Todo:
 Solve issues:
+* [Support Windows](https://github.com/adjivas/sig/issues/5)
 * [Consider using sigaction() instead of signal()](https://github.com/adjivas/sig/issues/3)
 * [Signal handlers should be unsafe functions](https://github.com/adjivas/sig/issues/2)
 
@@ -58,3 +59,5 @@ Unless you explicitly state otherwise, any contribution intentionally submitted 
 [license]: https://github.com/adjivas/sig/blob/master/README.md#license
 [travis-badge]: https://travis-ci.org/adjivas/sig.svg?style=flat-square
 [travis]: https://travis-ci.org/adjivas/sig
+[circle-badge]: https://circleci.com/gh/adjivas/sig/tree/master.svg?style=svg
+[circle]: https://circleci.com/gh/adjivas/sig/tree/master
