@@ -1,6 +1,6 @@
 # Signal
 
-[![Crate][crate-badge]][crate] [![docs-badge][]][docs] [![license-badge][]][license] [![travis-badge][]][travis] [![circle-badge][]][ci
+[![Crate][crate-badge]][crate] [![docs-badge][]][docs] [![license-badge][]][license] [![travis-badge][]][travis] [![circle-badge][]][circle]
 
 Supports POSIX. Untested on Windows (Not tested).
 
