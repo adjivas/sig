@@ -51,7 +51,7 @@ uses the [APACHE][license-mit] and [MIT][license-apache] license.
 
 Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.
 
-[crate-badge]: https://img.shields.io/badge/crates.io-v0.1.1-orange.svg?style=flat-square
+[crate-badge]: https://img.shields.io/crates/v/sig.svg?style=flat-square
 [crate]: https://crates.io/crates/sig
 [docs-badge]: https://img.shields.io/badge/API-docs-blue.svg?style=flat-square
 [docs]: http://adjivas.github.io/sig/sig
