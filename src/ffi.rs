@@ -5,7 +5,9 @@
 // This file may not be copied, modified, or distributed
 // except according to those terms.
 
-pub use libc::{pid_t, c_int, getpid, kill};
+pub use libc::{c_int, getpid};
+#[cfg(unix)]
+pub use libc::{pid_t, kill};
 
 #[allow(non_snake_case)]
 #[cfg(unix)]
@@ -77,4 +79,17 @@ pub mod Sig {
     pub const PROF   : c_int = libc::SIGPROF;   // Profiling alarm clock (4.2 BSD).
     pub const WINCH  : c_int = libc::SIGWINCH;  // Window size change (4.3 BSD Sun).
     pub const SYS    : c_int = libc::SIGSYS;    // Bad system call.
+}
+
+#[allow(non_snake_case)]
+#[cfg(windows)]
+pub mod Sig {
+    use libc::{self, c_int};
+    
+    pub const INT    : c_int = libc::SIGINT;
+    pub const ILL    : c_int = libc::SIGILL;
+    pub const ABRT   : c_int = libc::SIGABRT;
+    pub const FPE    : c_int = libc::SIGFPE;
+    pub const SEGV   : c_int = libc::SIGSEGV;
+    pub const TERM   : c_int = libc::SIGTERM;
 }
