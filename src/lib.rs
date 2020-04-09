@@ -24,11 +24,14 @@ extern crate libc;
 mod macros;
 pub mod ffi;
 
-use libc::{sigaction, sighandler_t, sigfillset};
+use libc::sighandler_t;
+#[cfg(unix)] use libc::{sigaction, sigfillset};
+#[cfg(windows)] use libc::signal;
 use std::{mem, ptr};
 
+#[cfg(unix)]
 #[inline]
-pub unsafe fn set_signal_handler(signal: ffi::c_int,
+pub unsafe fn set_signal_handler(sig: ffi::c_int,
                                  handler: unsafe extern "C" fn(ffi::c_int)) {
     let mut sigset = mem::uninitialized();
 
@@ -44,6 +47,13 @@ pub unsafe fn set_signal_handler(signal: ffi::c_int,
         action.sa_mask = sigset;
         action.sa_sigaction = handler as sighandler_t;
 
-        sigaction(signal, &action, ptr::null_mut());
+        sigaction(sig, &action, ptr::null_mut());
     }
+}
+
+#[cfg(windows)]
+#[inline]
+pub unsafe fn set_signal_handler(sig: ffi::c_int,
+                                 handler: unsafe extern "C" fn(ffi::c_int)) {
+    signal(sig, handler as sighandler_t);
 }
